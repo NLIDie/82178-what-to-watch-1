@@ -1,10 +1,11 @@
 {
   "name": "what-to-watch",
   "version": "1.0.0",
+  "main": "./src/index.js",
   "private": true,
   "description": "Личный проект «Что посмотреть» от HTML Academy",
   "scripts": {
-    "eslint": "eslint src/**/*.js src/**/*.jsx",
+    "eslint": "eslint src/**/*.js",
     "test": "npm run eslint",
     "build": "webpack --mode development",
     "start": "webpack-dev-server"
