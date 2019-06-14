@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/VideoPlayer Correct renderer the component 1`] = `
+<video
+  height="100%"
+  muted={true}
+  onMouseOut={[MockFunction]}
+  onMouseOver={[MockFunction]}
+  poster="img/poster"
+  src="video/src"
+  width="100%"
+/>
+`;
