@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/FilmCard Correct renderer the component 1`] = `
+<article
+  className="small-movie-card catalog__movies-card"
+>
+  <button
+    className="small-movie-card__play-btn"
+    onClick={[Function]}
+    type="button"
+  >
+    Play
+  </button>
+  <div
+    className="small-movie-card__image"
+  >
+    <img
+      alt="Movie title"
+      height="175"
+      src="empty"
+      width="280"
+    />
+  </div>
+  <h3
+    className="small-movie-card__title"
+  >
+    <a>
+      Movie title
+    </a>
+  </h3>
+</article>
+`;

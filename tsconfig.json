@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+    "sourceMap": true,
+    "module": "commonjs",
+    "baseUrl": ".",
+    "jsx": "react",
+    "target": "es2018",
+    "lib": ["dom", "es2018"],
+    "allowSyntheticDefaultImports": false,
+    "paths": {
+      "_Api/*": ["src/api/*"],
+      "_Components/*": ["src/components/*"],
+      "_Constants/*": ["src/constants/*"],
+      "_Containers/*": ["src/containers/*"],
+      "_Hooks/*": ["src/hooks/*"],
+      "_Layouts/*": ["src/layouts/*"],
+      "_Mocks/*": ["src/mocks/*"],
+      "_Pages/*": ["src/pages/*"],
+      "_Store/*": ["src/store/*"],
+      "_Types/*": ["src/types/*"],
+      "_Utils/*": ["src/utils/*"]
+    }
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "public"
+  ]
+}
