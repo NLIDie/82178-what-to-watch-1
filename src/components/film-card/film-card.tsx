@@ -5,10 +5,10 @@ import {Link} from "react-router-dom";
 import {TProps} from "./film-card.types";
 
 export function FilmCard(props: TProps) {
-  const {id, title, preview, onClickPlay} = props;
+  const {id, title, preview, onPlay} = props;
 
-  const onClickPlayButton = (event: React.SyntheticEvent<HTMLElement>) => {
-    onClickPlay(event, id);
+  const handleFilmPlayButton = (event: React.SyntheticEvent<HTMLElement>) => {
+    onPlay(event, id);
   };
 
   return (
@@ -16,7 +16,7 @@ export function FilmCard(props: TProps) {
       <button
         className="small-movie-card__play-btn"
         type="button"
-        onClick={onClickPlayButton}
+        onClick={handleFilmPlayButton}
       >
         Play
       </button>

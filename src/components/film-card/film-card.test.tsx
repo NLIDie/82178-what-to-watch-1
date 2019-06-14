@@ -17,7 +17,7 @@ describe(`Components/FilmCard`, () => {
           id={1}
           title="Movie title"
           preview="empty"
-          onClickPlay={jest.fn()}
+          onPlay={jest.fn()}
         />
     );
 
