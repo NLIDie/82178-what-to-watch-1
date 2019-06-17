@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layouts/main-layout Correct renderer layout 1`] = `
+Array [
+  <header>
+    Header
+  </header>,
+  <main
+    className="page-content"
+  >
+    <div>
+      Main Content
+    </div>
+    <footer>
+      Footer
+    </footer>
+  </main>,
+]
+`;

@@ -1,5 +1,3 @@
-export type TFilmGenres = string
-
 export type TFilm = {
   id: number;
   name: string;
@@ -15,7 +13,7 @@ export type TFilm = {
   director: string;
   starring: string[];
   runTime: number;
-  genre: TFilmGenres;
+  genre: 'All genres' | string;
   released: number;
   isFavorite: boolean;
 };

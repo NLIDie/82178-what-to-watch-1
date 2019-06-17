@@ -2,12 +2,12 @@
 
 exports[`Components/VideoPlayer Correct renderer the component 1`] = `
 <video
-  height="100%"
+  height="176"
   muted={true}
   onMouseOut={[MockFunction]}
   onMouseOver={[MockFunction]}
   poster="img/poster"
   src="video/src"
-  width="100%"
+  width="280"
 />
 `;

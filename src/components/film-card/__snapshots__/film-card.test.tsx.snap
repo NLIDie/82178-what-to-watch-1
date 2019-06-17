@@ -6,11 +6,13 @@ exports[`Components/FilmCard Correct renderer the component 1`] = `
 >
   <a>
     <video
-      height="100%"
+      height="176"
       muted={true}
       onMouseOut={[Function]}
       onMouseOver={[Function]}
-      width="100%"
+      poster="empty"
+      src="empty"
+      width="280"
     />
   </a>
   <h3

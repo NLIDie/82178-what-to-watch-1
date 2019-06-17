@@ -6,6 +6,8 @@ import { TProps } from './video-player.types';
 export function VideoPlayer(props: TProps): JSX.Element {
   const {
     muted = true,
+    width = "280",
+    height = "176",
     poster,
     src,
     onMouseOut,
@@ -14,8 +16,8 @@ export function VideoPlayer(props: TProps): JSX.Element {
 
   return (
     <video
-      width="100%"
-      height="100%"
+      width={width}
+      height={height}
       src={src}
       poster={poster}
       muted={muted}

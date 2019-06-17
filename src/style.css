@@ -928,7 +928,6 @@ main {
 }
 
 .movie-card__reviews-col {
-  width: calc((100% - 60px) / 2);
   margin-right: 60px;
   max-width: 380px;
 }
