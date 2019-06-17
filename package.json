@@ -27,6 +27,7 @@
     "@types/react-router-dom": "4.3.3",
     "@types/react-test-renderer": "16.8.1",
     "@types/webpack": "4.4.32",
+    "axios-mock-adapter": "1.16.0",
     "babel-jest": "24.8.0",
     "babel-loader": "8.0.6",
     "css-loader": "3.0.0",
