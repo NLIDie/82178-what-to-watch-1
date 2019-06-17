@@ -6,10 +6,10 @@ import {Router, Route, Switch, Redirect} from "react-router-dom";
 import {MainLayout} from "_Layouts/main-layout/main-layout";
 
 // Pages
-import {MainPage} from "_Pages/main-page/main-page";
+import MainPage from "_Pages/main-page/main-page";
 import {SignInPage} from "_Pages/sign-in-page/sign-in-page";
 import {MyListPage} from "_Pages/my-list-page/my-list-page";
-import {FilmPage} from "_Pages/film-page/film-page";
+import FilmPage from "_Pages/film-page/film-page";
 import {AddReviewPage} from "_Pages/add-review-page/add-review-page";
 
 // Components
@@ -32,10 +32,23 @@ export function App(): JSX.Element {
         <MainLayout header={<Header />} footer={<Footer />}>
           <Switch>
             <Route path="/" exact component={MainPage} />
+
             <Route path="/login" component={SignInPage} />
+
             <Route path="/my-list" component={MyListPage} />
+
             <Route path="/film/:id/review" component={AddReviewPage} />
-            <Route path="/film/:id" component={FilmPage} />
+
+            <Route
+              path="/film/:id"
+              render={(props) => {
+                const {match} = props;
+                const filmId = parseInt(match.params.id, 10);
+
+                return <FilmPage filmId={filmId} />;
+              }}
+            />
+
             <Redirect to="/login" />
           </Switch>
         </MainLayout>

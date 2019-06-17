@@ -14,10 +14,10 @@ describe(`Components/FilmCard`, () => {
   it(`Correct renderer the component`, () => {
     const tree = create(
         <FilmCard
+          poster="empty"
+          previewVideo="empty"
           id={1}
           title="Movie title"
-          preview="empty"
-          onPlay={jest.fn()}
         />
     );
 
