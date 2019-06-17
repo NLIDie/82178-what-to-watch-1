@@ -4,7 +4,7 @@ import * as React from "react";
 import {Tabs} from "_Components/tabs/tabs";
 import {FilmCardTabOverviewContent} from "_Components/film-card-tab-overview-content/film-card-tab-overview-content";
 import {FilmCardTabDetailsContent} from "_Components/film-card-tab-details-content/film-card-tab-details-content";
-import {ReviewList} from "_Components/review-list/review-list";
+import {FilmCardTabReviewsContent} from "_Components/film-card-tab-reviews-content/film-card-tab-reviews-content";
 
 // Hooks
 import {useComments} from "_Hooks/useComments";
@@ -123,25 +123,7 @@ export function FilmPage(props: TProps): JSX.Element {
                   }
 
                   if (activeTab === FilmCardTabs.REVIEWS) {
-                    return (
-                      <div className="movie-card__reviews movie-card__row">
-                        <div className="movie-card__reviews-col">
-                          <ReviewList
-                            reviews={comments.filter(
-                                (_, index) => index % 2 === 0
-                            )}
-                          />
-                        </div>
-
-                        <div className="movie-card__reviews-col">
-                          <ReviewList
-                            reviews={comments.filter(
-                                (_, index) => index % 2 !== 0
-                            )}
-                          />
-                        </div>
-                      </div>
-                    );
+                    return <FilmCardTabReviewsContent comments={comments} />;
                   }
                 }}
               </Tabs>

@@ -4,7 +4,7 @@ import {create} from "react-test-renderer";
 // Components
 import {Footer} from "./footer";
 
-describe(`Components/footer`, () => {
+describe(`Components/Footer`, () => {
   it(`Correct renderer component`, () => {
     const tree = create(<Footer />);
 

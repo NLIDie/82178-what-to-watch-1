@@ -55,7 +55,7 @@ module.exports = {
 
   devServer: {
     compress: false,
-    port: 3001,
+    port: 1337,
     open: true,
     historyApiFallback: true
   },

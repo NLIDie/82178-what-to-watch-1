@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/MovieGenresNavListItem Correct renderer the component 1`] = `
+exports[`Components/FilmsGenresNavListItem Correct renderer the component 1`] = `
 <li
   className="catalog__genres-item catalog__genres-item--active"
   onClick={[Function]}

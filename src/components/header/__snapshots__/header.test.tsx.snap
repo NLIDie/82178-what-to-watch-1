@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/header Correct rendering the component 1`] = `
+exports[`Components/Header Correct rendering the component 1`] = `
 <header
   className="page-header"
   style={
