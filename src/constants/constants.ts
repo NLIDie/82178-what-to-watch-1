@@ -27,6 +27,9 @@ export const FilmCardTabs = {
   REVIEWS: `Reviews`
 } as const;
 
+
 export type TFilmCardTab = typeof FilmCardTabs[keyof typeof FilmCardTabs];
 
 export const FILM_CARD_TABS: TFilmCardTab[] = [`Overview`, `Details`, `Reviews`];
+
+export const MINUTES_IN_ONE_HOUR = 60;

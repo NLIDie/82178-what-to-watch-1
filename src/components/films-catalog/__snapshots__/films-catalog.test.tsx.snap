@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/FilmCardTabReviewsContent Correct renderer the component 1`] = `
+<section
+  className="catalog"
+>
+  <h2
+    className="catalog__title visually-hidden"
+  >
+    Catalog
+  </h2>
+  <ul
+    className="catalog__genres-list"
+  >
+    <li
+      className="catalog__genres-item catalog__genres-item--active"
+      onClick={[Function]}
+    >
+      <a
+        className="catalog__genres-link"
+        href="#"
+      >
+        genre1
+      </a>
+    </li>
+    <li
+      className="catalog__genres-item "
+      onClick={[Function]}
+    >
+      <a
+        className="catalog__genres-link"
+        href="#"
+      >
+        genre2
+      </a>
+    </li>
+    <li
+      className="catalog__genres-item "
+      onClick={[Function]}
+    >
+      <a
+        className="catalog__genres-link"
+        href="#"
+      >
+        genre3
+      </a>
+    </li>
+  </ul>
+  <div
+    className="catalog__movies-list"
+  >
+    <article
+      className="small-movie-card catalog__movies-card"
+    >
+      <a>
+        <video
+          height="176"
+          muted={true}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          poster="https://es31-server.appspot.com/wtw/static/film/preview/moonrise-kingdom.jpg"
+          src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+          width="280"
+        />
+      </a>
+      <h3
+        className="small-movie-card__title"
+      >
+        <a>
+          Moonrise Kingdom
+        </a>
+      </h3>
+    </article>
+  </div>
+</section>
+`;

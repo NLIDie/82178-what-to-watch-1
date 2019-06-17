@@ -1,15 +1,18 @@
-import * as React from 'react';
-import { create } from 'react-test-renderer';
+import * as React from "react";
+import {create} from "react-test-renderer";
 
 // Components
-import { FilmsGenresNavList } from './films-genres-nav-list';
+import {FilmsGenresNavList} from "./films-genres-nav-list";
 
-describe('Components/MovieGenresNavList', () => {
-  it('Correct renderer the component', () => {
+describe(`Components/FilmsGenresNavList`, () => {
+  it(`Correct renderer the component`, () => {
     const tree = create(
-      <FilmsGenresNavList genres={['All genres', 'Crime']} onChange={jest.fn()} />
+        <FilmsGenresNavList
+          genres={[`All genres`, `Crime`]}
+          onChange={jest.fn()}
+        />
     );
 
     expect(tree).toMatchSnapshot();
-  })
-})
+  });
+});

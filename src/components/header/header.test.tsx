@@ -4,7 +4,7 @@ import {create} from "react-test-renderer";
 // Components
 import {Header} from "./header";
 
-describe(`Components/header`, () => {
+describe(`Components/Header`, () => {
   it(`Correct rendering the component`, () => {
     const tree = create(<Header />);
 

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/MovieGenresNavList Correct renderer the component 1`] = `
+exports[`Components/FilmsGenresNavList Correct renderer the component 1`] = `
 <ul
   className="catalog__genres-list"
 >
