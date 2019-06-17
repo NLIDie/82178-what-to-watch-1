@@ -1,8 +1,7 @@
 import * as React from "react";
 
 // Components
-import {FilmsGenresNavList} from "_Components/films-genres-nav-list/films-genres-nav-list";
-import {FilmCardList} from "_Components/film-card-list/film-card-list";
+import FilmsCatalogContainer from "_Components/films-catalog/films-catalog";
 
 // Hooks
 import {useGenresOfFilms} from "_Hooks/useGenresOfFilms";
@@ -13,6 +12,7 @@ import {useSelectedGenre} from "_Hooks/useSelectedGenre";
 
 // Types
 import {TProps} from "./main-page.type";
+import { FilmsCatalogWithShowMore } from "_Containers/films-catalog-with-show-more/films-catalog-with-show-more";
 
 export function MainPage(props: TProps): JSX.Element {
   const {films, genres, onChangeGenre} = props;
@@ -73,19 +73,12 @@ export function MainPage(props: TProps): JSX.Element {
         </div>
       </section>
 
-      <section className="catalog">
-        <h2 className="catalog__title visually-hidden">Catalog</h2>
-
-        <FilmsGenresNavList genres={genres} onChange={onChangeGenre} />
-
-        <FilmCardList films={films} />
-
-        <div className="catalog__more">
-          <button className="catalog__button" type="button">
-            Show more
-          </button>
-        </div>
-      </section>
+      <FilmsCatalogWithShowMore
+        films={films}
+        genres={genres}
+        onChangeGenre={onChangeGenre}
+        size={20}
+      />
     </React.Fragment>
   );
 }
