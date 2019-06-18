@@ -6,18 +6,21 @@ import {ReduxNamespaces, RequestStatuses} from "_Constants/constants";
 
 // Types
 import {TFilmsState} from "_Store/films/reducer/reducer.types";
-import {TFilmsEffects} from "_Store/films/effects/effects.types";
 import {TFilmsActions} from "_Store/films/actions/actions.types";
+import {TFilmsEffects} from "_Store/films/effects/effects.types";
 import {TSelectedGenreState} from "_Store/selected-genre/reducer/reducer.types";
 import {TSelectedGenreActions} from "_Store/selected-genre/actions/action.types";
 import {TCommentsState} from "_Store/comments/reducer/reducer.types";
 import {TCommentsActions} from "_Store/comments/actions/actions.types";
-// import {TUserState} from "_Store/user/reducer/reducer.types";
+import {TCommentsEffects} from "_Store/comments/effects/effects.types";
+import {TUserState} from "_Store/user/reducer/reducer.type";
+import {TUserActions} from "_Store/user/actions/actions.type";
 
 export type TRootState = {
   readonly comments: TCommentsState;
   readonly films: TFilmsState;
   readonly selectedGenre: TSelectedGenreState;
+  readonly user: TUserState;
 };
 
 export type TRequestStatus =
@@ -34,7 +37,11 @@ export interface IAction<T, P = {}, M = {}> {
   meta?: M;
 }
 
-export type TDispatch<A extends IAction<any>> = Dispatch<A>;
+export type TDispatch<A extends IAction<any>> = ThunkDispatch<
+  TRootState,
+  TThunkExtraArgument,
+  A
+>;
 
 export type TEffectAction<R, A extends IAction<any>> = ThunkAction<
   R,
@@ -43,17 +50,12 @@ export type TEffectAction<R, A extends IAction<any>> = ThunkAction<
   A
 >;
 
-export type TEffectDispatch<A extends IAction<any>> = ThunkDispatch<
-  TRootState,
-  TThunkExtraArgument,
-  A
->;
-
 export type TRootActions =
   | TFilmsActions
   | TSelectedGenreActions
-  | TCommentsActions;
+  | TCommentsActions
+  | TUserActions;
 
-export type TRootEffects = TFilmsEffects;
+export type TRootEffects = TFilmsEffects | TCommentsEffects;
 
 export type TActionsAndEffects = TRootActions | TRootEffects;

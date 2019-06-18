@@ -4,7 +4,7 @@ import * as React from "react";
 import {TabsItem} from "_Components/tabs-item/tabs-item";
 
 // Hooks
-import {useActiveItem} from "_Hooks/useActiveItem";
+import {useActiveItem} from "_Hooks/use-active-item";
 
 // Types
 import {TProps} from "./tabs.types";

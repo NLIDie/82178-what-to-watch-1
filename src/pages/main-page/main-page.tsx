@@ -1,18 +1,16 @@
 import * as React from "react";
 
-// Components
-import FilmsCatalogContainer from "_Components/films-catalog/films-catalog";
-
 // Hooks
-import {useGenresOfFilms} from "_Hooks/useGenresOfFilms";
-import {useRequestFilms} from "_Hooks/useRequestFilms";
-import {useHandleSelectedGenreChange} from "_Hooks/useHandleSelectedGenreChange";
-import {useFilteredFilmsByGenre} from "_Hooks/useFilteredFilmsByGenre";
-import {useSelectedGenre} from "_Hooks/useSelectedGenre";
+import {useGenresOfFilms} from "_Hooks/use-genres-of-films";
+import {useRequestFilms} from "_Hooks/use-request-films";
+import {useHandleSelectedGenreChange} from "_Hooks/use-handle-selected-genre-change";
+import {useFilteredFilmsByGenre} from "_Hooks/use-filtered-films-by-genre";
+import {useSelectedGenre} from "_Hooks/use-selected-genre";
+import {useRequestCheckLogin} from "_Hooks/use-check-login";
 
 // Types
 import {TProps} from "./main-page.type";
-import { FilmsCatalogWithShowMore } from "_Containers/films-catalog-with-show-more/films-catalog-with-show-more";
+import {FilmsCatalogWithShowMore} from "_Containers/films-catalog-with-show-more/films-catalog-with-show-more";
 
 export function MainPage(props: TProps): JSX.Element {
   const {films, genres, onChangeGenre} = props;
@@ -85,6 +83,7 @@ export function MainPage(props: TProps): JSX.Element {
 
 function MainPageContainer(): JSX.Element {
   useRequestFilms();
+  useRequestCheckLogin();
 
   const selectedGenre = useSelectedGenre();
   const genresOfFilms = useGenresOfFilms();

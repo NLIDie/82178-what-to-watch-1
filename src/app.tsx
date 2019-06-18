@@ -6,14 +6,14 @@ import {Router, Route, Switch, Redirect} from "react-router-dom";
 import {MainLayout} from "_Layouts/main-layout/main-layout";
 
 // Pages
-import MainPage from "_Pages/main-page/main-page";
-import {SignInPage} from "_Pages/sign-in-page/sign-in-page";
+import MainPageContainer from "_Pages/main-page/main-page";
+import FilmPageContainer from "_Pages/film-page/film-page";
+import SignInPageContainer from "_Pages/sign-in-page/sign-in-page";
 import {MyListPage} from "_Pages/my-list-page/my-list-page";
-import FilmPage from "_Pages/film-page/film-page";
 import {AddReviewPage} from "_Pages/add-review-page/add-review-page";
 
 // Components
-import {Header} from "_Components/header/header";
+import HeaderContainer from "_Components/header/header";
 import {Footer} from "_Components/footer/footer";
 
 // Utils
@@ -29,11 +29,11 @@ export function App(): JSX.Element {
   return (
     <ProviderRedux store={store}>
       <Router history={history}>
-        <MainLayout header={<Header />} footer={<Footer />}>
+        <MainLayout header={<HeaderContainer />} footer={<Footer />}>
           <Switch>
-            <Route path="/" exact component={MainPage} />
+            <Route path="/" exact component={MainPageContainer} />
 
-            <Route path="/login" component={SignInPage} />
+            <Route path="/login" component={SignInPageContainer} />
 
             <Route path="/my-list" component={MyListPage} />
 
@@ -45,11 +45,11 @@ export function App(): JSX.Element {
                 const {match} = props;
                 const filmId = parseInt(match.params.id, 10);
 
-                return <FilmPage filmId={filmId} />;
+                return <FilmPageContainer filmId={filmId} />;
               }}
             />
 
-            <Redirect to="/login" />
+            <Redirect to="/" />
           </Switch>
         </MainLayout>
       </Router>

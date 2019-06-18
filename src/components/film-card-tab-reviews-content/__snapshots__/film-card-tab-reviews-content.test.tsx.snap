@@ -28,11 +28,11 @@ exports[`Components/FilmCardTabReviewsContent Correct renderer the component 1`]
           </cite>
           <time
             className="review__date"
-            dateTime="Mon Jun 17 2019"
+            dateTime="Tue Jun 18 2019"
           >
             June
              
-            17
+            18
             , 
             2019
           </time>

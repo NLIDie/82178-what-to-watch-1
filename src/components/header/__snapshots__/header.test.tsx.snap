@@ -44,16 +44,9 @@ exports[`Components/Header Correct rendering the component 1`] = `
   <div
     className="user-block"
   >
-    <div
-      className="user-block__avatar"
-    >
-      <img
-        alt="User avatar"
-        height="63"
-        src="../src/assets/img/avatar.jpg"
-        width="63"
-      />
-    </div>
+    <a>
+      Sing In
+    </a>
   </div>
 </header>
 `;
