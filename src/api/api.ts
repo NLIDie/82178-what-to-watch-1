@@ -25,8 +25,6 @@ export class Api {
         this._handleInterceptorResponseSuccess,
         this._handleInterceptorResponseFailure
     );
-
-    this._axios.interceptors.request.use(this._handleInterceptorRequestSuccess);
   }
 
   private _handleInterceptorResponseSuccess(
@@ -41,14 +39,6 @@ export class Api {
     }
 
     return err;
-  }
-
-  private _handleInterceptorRequestSuccess(
-      config: AxiosRequestConfig
-  ): AxiosRequestConfig {
-    const isMethodPost = config.method === HttpMethods.POST;
-
-    return isMethodPost ? withStringifyConfigData(config) : config;
   }
 
   public get<T>(resource: string): Promise<AxiosResponse<T>> {

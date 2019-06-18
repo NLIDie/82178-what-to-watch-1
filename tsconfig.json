@@ -21,7 +21,8 @@
       "_Store/*": ["src/store/*"],
       "_Types/*": ["src/types/*"],
       "_Utils/*": ["src/utils/*"]
-    }
+    },
+    "keyofStringsOnly": true
   },
   "include": [
     "src"

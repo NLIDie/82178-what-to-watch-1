@@ -7,10 +7,11 @@ import {FilmCardTabDetailsContent} from "_Components/film-card-tab-details-conte
 import {FilmCardTabReviewsContent} from "_Components/film-card-tab-reviews-content/film-card-tab-reviews-content";
 
 // Hooks
-import {useComments} from "_Hooks/useComments";
-import {useFilm} from "_Hooks/useFilm";
-import {useRequestComments} from "_Hooks/useRequestComments";
-import {useRequestFilms} from "_Hooks/useRequestFilms";
+import {useComments} from "_Hooks/use-comments";
+import {useFilm} from "_Hooks/use-film";
+import {useRequestComments} from "_Hooks/use-request-comments";
+import {useRequestFilms} from "_Hooks/use-request-films";
+import {useRequestCheckLogin} from "_Hooks/use-check-login";
 
 // Constants
 import {
@@ -22,7 +23,7 @@ import {
 // Types
 import {TProps, TPropsContainer} from "./film-page.types";
 import {FilmCardList} from "_Components/film-card-list/film-card-list";
-import {useFilteredFilmsByGenre} from "_Hooks/useFilteredFilmsByGenre";
+import {useFilteredFilmsByGenre} from "_Hooks/use-filtered-films-by-genre";
 import {TFilm} from "_Types/film";
 import {TComment} from "_Types/comment";
 
@@ -153,6 +154,7 @@ function FilmPageContainer(props: TPropsContainer): JSX.Element {
 
   useRequestFilms();
   useRequestComments(filmId);
+  useRequestCheckLogin();
 
   return (
     <FilmPage similarFilms={similarFilms} film={film} comments={comments} />
